@@ -1,0 +1,79 @@
+i.icon-blue {
+    color:#00b0ff ;
+    background-color: #00b0ff;
+}
+
+i.icon-bawah{
+    margin-top: 35px;
+}
+
+#accor{
+    border-bottom: 0px solid;
+}
+
+#customer{
+    text-transform: none
+}
+
+#dropdown1{
+    width: 35%;
+}
+
+.kelabu {
+    color: #5f6368;
+}
+
+.gelap {
+    color: #202124;
+}
+
+.tebal {
+    font-weight: 500;
+}
+
+#login-card {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+#submit-button {
+    text-transform: none;
+    font-weight: 500;
+    background-color: #00b0ff;
+}
+
+#create-account {
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+#brand {
+    width: 50%;
+    height: auto;
+}
+
+#or {
+    margin-left: 40px;
+}
+
+#footer {
+    margin-right: 40px;
+}
+
+.footer-link {
+    margin-right: 20px;
+}
+
+#footer-close {
+    margin-top: 40px;
+}
+
+#sidebar-icon{
+    margin-top: 5px;
+}
+
+#inventory-modal{
+    padding: 15px;
+}

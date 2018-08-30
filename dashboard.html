@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="">
+    <title>Dashboard - Admin</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="custom.css">
+    
+    <!-- Fullcalendar-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css" rel="stylesheet">
+    <!-- Materialize-->
+    
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+
+
+
+<!-- Javascript START HERE -->
+
+
+ <!-- Javascripts End Here -->
+ 
+ <!-- HTML START HERE -->
+ <link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/admin-materialize.min.css?1459025178480663678" rel="stylesheet">
+</head>
+  <body class="has-fixed-sidenav">
+    <header>
+      <div class="navbar-fixed">
+        <nav class="navbar white">
+          <div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4">Linear DMS System</a>
+            <ul id="nav-mobile" class="right">
+              <li class="hide-on-med-and-down"><a href="#" data-target="dropdown1" class="dropdown-trigger waves-effect"><i class="material-icons">notifications</i></a></li>
+              <li><a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><i class="material-icons">settings</i></a></li>
+            </ul><a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+          </div>
+        </nav>
+      </div>
+      <ul id="sidenav-left" class="sidenav sidenav-fixed light-blue accent-2">
+          <li><div class="user-view">
+              <div class="background">
+                <img src="img/bg.jpg">
+              </div>
+              <a href="#user"><img class="circle" src="img/dp.png"></a>
+              <a href="#name"><span class="white-text name">Rezza Danial</span></a>
+              <a href="#email"><span class="white-text email">rezza@lineardms.com.my</span></a>
+            </div>
+          </li>
+        <li class="no-padding">
+            <li class="bold waves-effect"><a href="dashboard.html" class="collapsible-header">Dashboard<i class="material-icons chevron">web</i></a></li>
+            <li class="bold waves-effect"><a href="inventory.html" class="collapsible-header">Inventory<i class="material-icons chevron">router</i></a></li> 
+          <ul id="accor" class="collapsible collapsible-accordion">
+            <li class="bold waves-effect"><a id="customer" class="collapsible-header">Customer<i class="material-icons chevron">chevron_left</i><i id="sidebar-icon" class="material-icons icon-bawah">person_fill</i></a>
+              <div class="collapsible-body">
+                <ul>
+                    <li><a href="#" class="waves-effect active">YTL<i class="material-icons">web</i></a></li>
+                    <li><a href="#" class="waves-effect">EBC<i class="material-icons">list</i></a></li>
+                    <li><a href="#" class="waves-effect">PNB<i class="material-icons">dashboard</i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div id="dropdown1" class="dropdown-content notifications">
+        <div class="notifications-title">notifications</div>
+        <div class="card">
+          <div class="card-content"><span class="card-title">Merdeka Day</span>
+            <p>Next public holiday will be on Friday 31 August 2018  </p>
+          </div>
+          <div class="card-action"><a class="light-blue-text" href="#!">view</a><a class="red-text" href="#!">dismiss</a></div>
+        </div>
+        <div class="card">
+            <div class="card-content"><span class="card-title">The Yang di-Pertuan Agong's Birthday</span>
+              <p>Next public holiday will be on Monday 10 September 2018  </p>
+            </div>
+            <div class="card-action"><a class="light-blue-text" href="#!">view</a><a class="red-text" href="#!">dismiss</a></div>
+          </div>
+      </div>
+      <div id="chat-dropdown" class="dropdown-content dropdown-tabbed">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a href="#settings">Settings</a></li>
+          <!-- <li class="tab col s3"><a href="#friends" class="active">Friends</a></li> -->
+        </ul>
+        <div id="settings" class="col s12">
+          <a href="login.html">Log Out</a>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="container">
+          <div class="row">
+              <div class="col s12">
+                  <h4>Dashboard</h4>
+                </div>
+              </div>
+
+              <div class="row">
+
+                  <section class="section section-stats center">
+                      <div class="row">
+                        <div class="col s12 m6 l3">
+                          <div class="card-panel blue lighten-1 white-text center">
+                            <i class="material-icons medium">insert_emoticon</i>
+                            <h5>Monthly Visitors</h5>
+                            <h3 class="count">28300</h3>
+                            <div class="progress grey lighten-1">
+                              <div class="determinate white" style="width: 40%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m6 l3">
+                          <div class="card-panel center">
+                            <i class="material-icons medium">mode_edit</i>
+                            <h5>Blog Posts</h5>
+                            <h3 class="count">105</h3>
+                            <div class="progress grey lighten-1">
+                              <div class="determinate blue lighten-1" style="width: 20%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m6 l3">
+                          <div class="card-panel blue lighten-1 white-text center">
+                            <i class="material-icons medium">mode_comment</i>
+                            <h5>Comments</h5>
+                            <h3 class="count">1200</h3>
+                            <div class="progress grey lighten-1">
+                              <div class="determinate white" style="width: 40%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m6 l3">
+                          <div class="card-panel center">
+                            <i class="material-icons medium">supervisor_account</i>
+                            <h5>Users</h5>
+                            <h3 class="count">350</h3>
+                            <div class="progress grey lighten-1">
+                              <div class="determinate blue lighten-1" style="width: 10%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="section section-visitors blue lighten-4">
+                        <div class="row">
+                          <div class="col s12 m6 l8">
+                            <div class="card-panel">
+                              <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                            </div>
+                          </div>
+                          <div class="col s12 m6 l4">
+                  
+                </div>
+
+
+    </main>
+
+    
+   
+
+    
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+  <script src="js/chart.js"></script>
+
+<!-- External libraries -->
+
+<!-- jqvmap -->
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.min.js?14590251784806636780"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.world.js?14590251784806636780" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.sampledata.js?14590251784806636780"></script>
+
+<!-- ChartJS -->
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.js?14590251784806636780"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.Financial.js?14590251784806636780"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/imagesloaded.pkgd.min.js?14590251784806636780"></script>
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/masonry.pkgd.min.js?14590251784806636780"></script>
+
+
+<!-- Initialization script -->
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/dashboard.min.js?14590251784806636780"></script>
+
+<!-- FROM MDADMIN -->
+<script>
+    // Hide Sections
+    $('.section').hide();
+
+    setTimeout(function () {
+      $(document).ready(function () {
+        // Show sections
+        $('.section').fadeIn();
+
+        // Hide preloader
+        $('.loader').fadeOut();
+
+        //Init Side nav
+        $('.button-collapse').sideNav();
+
+        // Init Modal
+        $('.modal').modal();
+
+        // Init Select
+        $('select').material_select();
+
+        // Counter
+        $('.count').each(function () {
+          $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+          }, {
+              duration: 1000,
+              easing: 'swing',
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              }
+            });
+        });
+
+        // Comments - Approve & Deny
+        $('.approve').click(function (e) {
+          Materialize.toast('Comment Approved', 3000);
+          e.preventDefault();
+        });
+        $('.deny').click(function (e) {
+          Materialize.toast('Comment Denied', 3000);
+          e.preventDefault();
+        });
+
+        // Quick Todos
+        $('#todo-form').submit(function (e) {
+          const output = `<li class="collection-item">
+                <div>${$('#todo').val()}
+                  <a href="#!" class="secondary-content delete">
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+              </li>`;
+
+          $('.todos').append(output);
+
+          Materialize.toast('Todo Added', 3000);
+
+          e.preventDefault();
+        });
+
+        // Delete Todos
+        $('.todos').on('click', '.delete', function (e) {
+          $(this).parent().parent().remove();
+          Materialize.toast('Todo Removed', 3000);
+
+          e.preventDefault();
+        });
+
+        CKEDITOR.replace('body');
+
+      });
+    }, 1000);
+  </script>
+
+  </body>
+</html>

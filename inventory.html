@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="">
+    <title>Dashboard - Admin</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="custom.css">
+    
+    <!-- Fullcalendar-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css" rel="stylesheet">
+    <!-- Materialize-->
+    
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- JSGRID CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/css/uikit.almost-flat.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css">
+
+    
+    
+
+
+
+
+<!-- Javascript START HERE -->
+
+
+ <!-- Javascripts End Here -->
+ 
+ <!-- HTML START HERE -->
+ <link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/admin-materialize.min.css?1459025178480663678" rel="stylesheet">
+</head>
+  <body class="has-fixed-sidenav">
+    <header>
+      <div class="navbar-fixed">
+        <nav class="navbar white">
+          <div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4">Linear DMS System</a>
+            <ul id="nav-mobile" class="right">
+              <li class="hide-on-med-and-down"><a href="#" data-target="dropdown1" class="dropdown-trigger waves-effect"><i class="material-icons">notifications</i></a></li>
+              <li><a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><i class="material-icons">settings</i></a></li>
+            </ul><a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+          </div>
+        </nav>
+      </div>
+      <ul id="sidenav-left" class="sidenav sidenav-fixed light-blue accent-2">
+          <li><div class="user-view">
+              <div class="background">
+                <img src="img/bg.jpg">
+              </div>
+              <a href="#user"><img class="circle" src="img/dp.png"></a>
+              <a href="#name"><span class="white-text name">Rezza Danial</span></a>
+              <a href="#email"><span class="white-text email">rezza@lineardms.com.my</span></a>
+            </div>
+          </li>
+        <li class="no-padding">
+            <li class="bold waves-effect"><a href="dashboard.html" class="collapsible-header">Dashboard<i class="material-icons chevron">web</i></a></li>
+            <li class="bold waves-effect"><a href="inventory.html" class="collapsible-header">Inventory<i class="material-icons chevron">router</i></a></li> 
+          <ul id="accor" class="collapsible collapsible-accordion">
+            <li class="bold waves-effect"><a id="customer" class="collapsible-header">Customer<i class="material-icons chevron">chevron_left</i><i id="sidebar-icon" class="material-icons icon-bawah">person_fill</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#" class="waves-effect active">YTL<i class="material-icons">web</i></a></li>
+                  <li><a href="#" class="waves-effect">EBC<i class="material-icons">list</i></a></li>
+                  <li><a href="#" class="waves-effect">PNB<i class="material-icons">dashboard</i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div id="dropdown1" class="dropdown-content notifications">
+        <div class="notifications-title">notifications</div>
+        <div class="card">
+          <div class="card-content"><span class="card-title">Merdeka Day</span>
+            <p>Next public holiday will be on Friday 31 August 2018  </p>
+          </div>
+          <div class="card-action"><a class="light-blue-text" href="#!">view</a><a class="red-text" href="#!">dismiss</a></div>
+        </div>
+        <div class="card">
+            <div class="card-content"><span class="card-title">The Yang di-Pertuan Agong's Birthday</span>
+              <p>Next public holiday will be on Monday 10 September 2018  </p>
+            </div>
+            <div class="card-action"><a class="light-blue-text" href="#!">view</a><a class="red-text" href="#!">dismiss</a></div>
+          </div>
+      </div>
+      <div id="chat-dropdown" class="dropdown-content dropdown-tabbed">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a href="#settings">Settings</a></li>
+          <!-- <li class="tab col s3"><a href="#friends" class="active">Friends</a></li> -->
+        </ul>
+        <div id="settings" class="col s12">
+          <a href="login.html">Log Out</a>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="container">
+          <div class="row">
+              <div class="col s12">
+                  <h4>Inventory</h4>
+                </div>
+
+
+              </div>
+
+              
+              <div class="row" id="app">
+                  <div id="jsGrid"></div>
+
+
+              </div>
+      <!-- FAB -->
+                <div class="fixed-action-btn">
+                    <a class=" modal-trigger btn-floating btn-large red" href="#inventory-modal">
+                      <i class="material-icons">add</i>  
+                    </a>
+                    
+                  </div>
+
+
+    </main>
+
+      <!-- Add Inventory Modal -->
+  <div id="inventory-modal" class="modal">
+      <div class="modal-content">
+        <h4>Add Inventory</h4>
+        <form>
+          <div>
+            <select>
+                <option value="" disabled selected> Select Devices</option>
+                <option value="nodus-light">Nodus Light</option>
+                <option value="nodus-gateway">Nodus Gateway</option>
+                <option value="nodus-wall">Nodus Wall</option>
+              </select>
+              <label>Product Type</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="mac-address">
+            <label for="mac-address">MAC Address</label>
+          </div>
+          <div class="input-field">
+              <input type="text" id="bluetooth-address">
+              <label for="bluetooth-address">Bluetooth Address</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="serial-number">
+                <label for="serial-number">Serial Number</label>
+              </div>
+        </form>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+        </div>
+      </div>
+    </div>
+   
+
+    
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.2/jsgrid.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+
+
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+  <script src="js/chart.js"></script>
+
+<!-- External libraries -->
+
+<!-- jqvmap -->
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.min.js?14590251784806636780"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.world.js?14590251784806636780" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.sampledata.js?14590251784806636780"></script>
+
+<!-- ChartJS -->
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.js?14590251784806636780"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.Financial.js?14590251784806636780"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/imagesloaded.pkgd.min.js?14590251784806636780"></script>
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/masonry.pkgd.min.js?14590251784806636780"></script>
+
+
+<!-- Initialization script -->
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/dashboard.min.js?14590251784806636780"></script>
+
+<!-- FROM MDADMIN -->
+<script>
+    // Hide Sections
+    $('.section').hide();
+
+    setTimeout(function () {
+      $(document).ready(function () {
+        // Show sections
+        $('.section').fadeIn();
+
+        // Hide preloader
+        $('.loader').fadeOut();
+
+        //Init Side nav
+        $('.button-collapse').sideNav();
+
+        // Init Modal
+        $('.modal').modal();
+
+        // Init Select
+        $('select').material_select();
+
+        // Counter
+        $('.count').each(function () {
+          $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+          }, {
+              duration: 1000,
+              easing: 'swing',
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              }
+            });
+        });
+
+        // Comments - Approve & Deny
+        $('.approve').click(function (e) {
+          Materialize.toast('Comment Approved', 3000);
+          e.preventDefault();
+        });
+        $('.deny').click(function (e) {
+          Materialize.toast('Comment Denied', 3000);
+          e.preventDefault();
+        });
+
+        // Quick Todos
+        $('#todo-form').submit(function (e) {
+          const output = `<li class="collection-item">
+                <div>${$('#todo').val()}
+                  <a href="#!" class="secondary-content delete">
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+              </li>`;
+
+          $('.todos').append(output);
+
+          Materialize.toast('Todo Added', 3000);
+
+          e.preventDefault();
+        });
+
+        // Delete Todos
+        $('.todos').on('click', '.delete', function (e) {
+          $(this).parent().parent().remove();
+          Materialize.toast('Todo Removed', 3000);
+
+          e.preventDefault();
+        });
+
+        CKEDITOR.replace('body');
+
+      });
+    }, 1000);
+  </script>
+
+  <!-- JSGRID -->
+
+  <script>
+  var app = new Vue({
+  el: '#app',
+  data: function() {
+    let tableData = []
+    /*generate junk data*/
+    for (let i=0; i< 100; i++) {
+      tableData.push({ "Product Type": "Nodus Light", "Mac Address": "12:34:56:78:90:12", "Bluetooth Address": "90:78:56:34:12:34 ", "Serial Number": "HJ232J4325", "Firmware Version": "1.2", "Hardware Version": "3.6" });
+    } 
+    
+    let dataObj = { 
+      message: 'Hello Vue!',
+      clients: tableData,
+      product: [
+          { Name: "", Id: 0 },
+          { Name: "Nodus Light", Id: 1 },
+          { Name: "Nodus Gateway", Id: 2 },
+          { Name: "Nodus Wall", Id: 3 }
+      ],
+      grid: null
+    }
+    
+    return dataObj;
+  },
+  mounted: function() {
+    this.grid = $('#jsGrid');
+    this.grid.jsGrid({
+      //filtering: true,
+      width: "100%",
+      height: "400px",
+      selecting: true,
+      inserting: false,
+      editing: true,
+      sorting: true,
+      paging: true,
+      data: this.clients,
+
+      fields: [
+        { name: "Product Type", type: "text", width: 100, validate: "required" },
+        { name: "Mac Address", type: "text", width: 150, validate: "required" },
+        { name: "Bluetooth Address", type: "text", width: 150, validate: "required" },
+        { name: "Serial Number", type: "text", valueField: "Id", validate: "required" },
+        { name: "Firmware Version", type: "text", width: 100, validate: "required" },
+        { name: "Hardware Version", type: "text", width: 100, validate: "required" },
+        { type: "control" }
+      ]
+    })
+  }
+})
+</script>
+
+  </body>
+</html>
