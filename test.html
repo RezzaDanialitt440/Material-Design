@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <link type="text/css" rel="stylesheet" href="css/test.css" />
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Materialize Theme</title>
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body class="has-fixed-sidenav">
+
+        <nav class="navbar white">
+             <div class="container">
+                    <a href="#!" data-target="sidenav" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+                    <div class="nav-wrapper">
+                            <a href="#!" class="brand-logo grey-text text-darken-4">Linear DMS System</a>
+                    
+                    <ul class="right hide-on-med-and-down">
+                      <li class="">
+                        <a href="index.html">Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="users.html">Users</a>
+                      </li>
+                    </ul>
+                    <!-- Side nav -->
+                    <ul id="sidenav" class="sidenav sidenav-fixed light-blue accent-2">
+                     <li><div class="user-view">
+                                <div class="background"> <img src="img/bg.jpg">
+                                </div>
+                                <a href="#user"><img class="circle" src="img/dp.png"></a>
+                                <a href="#name"><span class="white-text name">Rezza Danial</span></a>
+                                <a href="#email"><span class="white-text email">rezza@lineardms.com.my</span></a>
+                              </div>
+                            </li>
+                          <li class="no-padding">
+                              <li class="bold waves-effect"><a href="dashboard.html" class="collapsible-header">Dashboard<i class="material-icons chevron">web</i></a></li>
+                              <li class="bold waves-effect"><a href="inventory.html" class="collapsible-header">Inventory<i class="material-icons chevron">router</i></a></li> 
+                            <ul id="accor" class="collapsible collapsible-accordion">
+                              <li class="bold waves-effect"><a href="test.html" id="customer" class="collapsible-header">Customer<i class="material-icons chevron">chevron_left</i><i id="sidebar-icon" class="material-icons icon-bawah">person_fill</i></a>
+                                <div class="collapsible-body">
+                                  <ul>
+                                      <li><a href="#" class="waves-effect active">YTL<i class="material-icons">web</i></a></li>
+                                      <li><a href="#" class="waves-effect">EBC<i class="material-icons">list</i></a></li>
+                                      <li><a href="#" class="waves-effect">PNB<i class="material-icons">dashboard</i></a></li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                  
+                  </div>
+                </div>
+              </nav>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+
+  <script>
+    // Hide Sections
+    $('.section').hide();
+
+    setTimeout(function () {
+      $(document).ready(function () {
+        // Show sections
+        $('.section').fadeIn();
+
+        // Hide preloader
+        $('.loader').fadeOut();
+
+        //Init Side nav
+        $('.sidenav-trigger').sideNav();
+
+        // Init Modal
+        $('.modal').modal();
+
+        // Init Select
+        $('select').material_select();
+
+        // Counter
+        $('.count').each(function () {
+          $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+          }, {
+              duration: 1000,
+              easing: 'swing',
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              }
+            });
+        });
+
+
+      });
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{
+  margin: 0%;
+  padding: 0%;  
+};
+
+div #tepi{
+    background-color: black;
+}
+
+div #tengah {
+    background-color: bisque;
+}
