@@ -12,7 +12,7 @@
 
     <link type="text/css" rel="stylesheet" href="css/main.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="css/custom.css">
     
 
     <!-- Material Icons-->
@@ -110,46 +110,10 @@
 
             <!-- FLOATING ACTION BUTTON -->
                   <div class="fixed-action-btn">
-                      <a class=" modal-trigger btn-floating btn-large red" href="#inventory-modal">
+                      <a class=" modal-trigger btn-floating btn-large red" href="add_inventory.html">
                         <i class="material-icons">add</i>  
                       </a>
-                  </div>
-
-
-            <!-- ADD INVENTORY MODAL -->
-                  <div id="inventory-modal" class="modal">
-                      <div class="modal-content">
-                        <h4>Add Inventory</h4>
-                        <form>
-                          <div>
-                            <select>
-                                <option value="" disabled selected> Select Devices</option>
-                                <option value="nodus-light">Nodus Light</option>
-                                <option value="nodus-gateway">Nodus Gateway</option>
-                                <option value="nodus-wall">Nodus Wall</option>
-                              </select>
-                              <label>Product Type</label>
-                          </div>
-                          <div class="input-field">
-                            <input type="text" id="mac-address">
-                            <label for="mac-address">MAC Address</label>
-                          </div>
-                          <div class="input-field">
-                              <input type="text" id="bluetooth-address">
-                              <label for="bluetooth-address">Bluetooth Address</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" id="serial-number">
-                                <label for="serial-number">Serial Number</label>
-                              </div>
-                        </form>
-                        <div class="modal-footer">
-                          <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
-                        </div>
-                      </div>
                     </div>
-
-                      
               </div>
 
     </main>
